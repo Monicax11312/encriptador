@@ -1,41 +1,67 @@
+<!--Declaración del tipo de documento HTML5-->
 <!DOCTYPE html>
+<!--Especifica el idioma del contenido del documento-->
 <html lang="en">
+<!--Sección del encabezado del documento-->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Metaetiqueta que especifica la codificación de caracteres del documento.-->
+    <meta charset="UTF-8" />
+    <!--Metaetiqueta que especifica la compatibilidad con Chrome-->
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome" />
+    <!--Metaetiqueta que especifica el ancho y la escala inicial de la ventana del navegador.
+      En este caso, se utiliza el ancho del dispositivo y una escala inicial de 1.0.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Título del documento-->
     <title>Encriptador de Texto</title>
-    <link rel="stylesheet" href="styles.css">
+    <!--Enlace al icono de favoritos del sitio web.En este caso,se utiliza un archivo llamado favicon.png ubicado en la carpeta img.-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <!--Enlace a la hoja de estilos del sitio web.-->
+    <link rel="stylesheet" href="styles.css" />
+    <!--Enlace a la biblioteca de JavaScript sweetalert.En este caso, se utiliza la versión mínima (min.js) desde un CDN.-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
-
+<!--Sección del cuerpo del documento-->
 <body>
-    <!--contenedor aislado-->
+    <!--Elemento contenedor que agrupa otros elementos-->
     <div class="container">
+        <!--Elemento contenedor que agrupa otros elementos relacionados con la encriptación.-->
         <div class="encriptar">
+            <!--Elemento de texto que permite al usuario ingresar texto-->
             <textarea name="texto" class="texto" id="texto" cols="30" rows="10"
-                placeholder="Ingrese el texto aqui"></textarea>
+                placeholder="Ingresa el texto aquí"></textarea>
+            <!--Elemento contenedor que agrupa otros elementos relacionados con los términos y condiciones.-->
             <div class="terminos">
-                <p>solo letras minusculas y sin acentos.</p>
+                <!--Elemento de párrafo que muestra un mensaje relacionado con los términos y condiciones.-->
+                <p>Solo letras minúsculas y sin acentos.</p>
             </div>
-            <!--Creación de botones-->
+            <!--Elemento contenedor que agrupa otros elementos relacionados con los botones-->
             <div class="botones">
+                <!--Botón que llama a la función encriptar() cuando se hace clic en él.-->
                 <button class="btn-encriptar" type="button" onclick="encriptar()">
                     Encriptar
                 </button>
+                <!--Botón que llama a la función desencriptar() cuando se hace clic en él.-->
                 <input type="button" class="btn-desencriptar" value="Desencriptar" onclick="desencriptar()" />
             </div>
         </div>
-        <!--contenedor-->
+        <!--Elemento contenedor que agrupa otros elementos relacionados con el texto encriptado.-->
         <div class="encriptado">
-            <img src="" alt="" id="muñeco">
+            <!--Imagen que se muestra en la sección de texto encriptado.-->
+            <img src="img/muñeco.png" alt="" id="muñeco" />
+            <!--Elemento contenedor que agrupa otros elementos relacionados con el mensaje encriptado.-->
             <div class="mensaje-encriptado" id="mensaje-encriptado">
-                <h2 id="titulo-mensaje">Ningún mensaje encontrado</h2>
-                <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
+                <!--Título del mensaje encriptado.-->
+                <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                <!--Párrafo que muestra un mensaje relacionado con el texto encriptado.-->
+                <p id="parrafo">
+                    Ingresa el texto que deseas encriptar o desencriptar
+                </p>
             </div>
         </div>
     </div>
 </body>
+<!--Enlace al archivo de JavaScript que contiene las funciones de encriptación y desencriptación.-->
 <script src="index.js"></script>
 
 </html>

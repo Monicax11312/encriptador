@@ -1,0 +1,238 @@
+/* Resetear estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Estilos para el contenedor principal */
+.container {
+    position: relative;/* Posición relativa para que los elementos absolutos se ubiquen correctamente */
+    width: 100vw;/* Ancho del contenedor igual al ancho de la pantalla */
+    height: 100vh;/* Alto del contenedor igual al alto de la pantalla */
+    background: #f3f5fc;/* Color de fondo del contenedor */
+}
+/* Estilos para el campo de texto */
+.texto {
+    position: absolute;/* Posición absoluta para ubicar el campo de texto en la pantalla */
+    width: 42%;/* Ancho del campo de texto */
+    height: 60%;/* Alto del campo de texto */
+    left: 12%;/* Posición horizontal del campo de texto */
+    top: 15%;/* Posición vertical del campo de texto */
+    border: none;/* No mostrar borde en el campo de texto */
+    font-family: "Inter";/* Fuente del campo de texto */
+    font-style: normal;/* Estilo de fuente normal */
+    font-weight: 400;/* Peso de fuente normal */
+    font-size: 32px;/* Tamaño de fuente del campo de texto */
+    line-height: 150%;/* Altura de línea del campo de texto */
+    background-color: #f3f5fc;/* Color de fondo del campo de texto */
+}
+/* Estilos para el placeholder del campo de texto */
+.texto::placeholder {
+    color: #0a3871;/* Color del placeholder */
+}
+/* Estilos para el campo de texto cuando se enfoca o se activa */
+.texto:focus,
+.texto:active {
+    border: none;/* No mostrar borde en el campo de texto cuando se enfoca o se activa */
+    outline: none;/* No mostrar outline en el campo de texto cuando se enfoca o se activa */
+}
+/* Estilos para el contenedor de términos */
+.terminos {
+    display: flex;/* Mostrar elementos en una fila */
+    flex-direction: row;/* Dirección de la fila */
+    align-items: center;/* Alinear elementos verticalmente */
+    padding: 0px;/* No mostrar padding en el contenedor de términos */
+    gap: 8px;/* Espacio entre elementos en la fila */
+    position: absolute;/* Posición absoluta para ubicar el contenedor de términos en la pantalla */
+    width: 80%;/* Ancho del contenedor de términos */
+    left: 12%;/* Posición horizontal del contenedor de términos */
+    top: 80%;/* Posición vertical del contenedor de términos */
+}
+/* Estilos para el párrafo de términos */
+.terminos p {
+    font-family: "Inter";/* Fuente del párrafo de términos */
+    font-style: normal;/* Estilo de fuente normal */
+    font-weight: 400;/* Peso de fuente normal */
+    font-size: 12px;/* Tamaño de fuente del párrafo de términos */
+    line-height: 150%;/* Altura de línea del párrafo de términos */
+    color: #495057;/* Color del párrafo de términos */
+    opacity: 0.8;/* Opacidad del párrafo de términos */
+    flex: none;/* No mostrar flexbox en el párrafo de términos */
+    order: 1;/* Orden del párrafo de términos en la fila */
+    flex-grow: 0;/* No mostrar crecimiento en el párrafo de términos */
+}
+/* Estilos para el contenedor de botones */
+.botones {
+    display: flex;/* Mostrar elementos en una fila */
+    flex-direction: row; /* Dirección de la fila */
+    align-items: flex-start;/* Alinear elementos verticalmente */
+    padding: 1% 0;/* Mostrar padding en el contenedor de botones */
+    position: absolute;/* Posición absoluta para ubicar el contenedor de botones en la pantalla */
+    width: 80%;/* Ancho del contenedor de botones */
+    left: 12%;/* Posición horizontal del contenedor de botones */
+    top: 82%;/* Posición vertical del contenedor de botones */
+}
+/* Estilos para el botón de encriptar */
+.btn-encriptar {
+    align-items: center;/* Alinear elementos verticalmente */
+    justify-content: center; /* Alinear elementos horizontalmente */
+    padding: 2%;/* Mostrar padding en el botón de encriptar */
+    gap: 8px;/* Espacio entre elementos en la fila */
+    width: 25%;/* Ancho del botón de encriptar */
+    background-color: #0a3871;/* Color de fondo del botón de encriptar */
+    border-radius: 24px;/* Radio de curvatura del botón de encriptar */
+    font-family: "Inter";/* Fuente del botón de encriptar */
+    font-size: 18px;/* Tamaño de fuente del botón de encriptar */
+    line-height: 19px; /* Altura de línea del botón de encriptar */
+    text-align: center;/* Alinear texto horizontalmente */
+    color: #fff;/* Color del texto del botón de encriptar */
+}
+/* Estilos para el botón de desencriptar */
+.btn-desencriptar {
+    box-sizing: border-box;/* Mostrar caja de borde */
+    display: flex;/* Mostrar elementos en una fila */
+    flex-direction: row; /* Dirección de la fila */
+    align-items: flex-start;/* Alinear elementos verticalmente */
+    justify-content: center;/* Alinear elementos horizontalmente */
+    padding: 2%;/* Mostrar padding en el botón de desencriptar */
+    gap: 8px;/* Espacio entre elementos en la fila */
+    width: 25%;/* Ancho del botón de desencriptar */
+    background: #d8dfe8;/* Color de fondo del botón de desencriptar */
+    border: 1px solid #0a3871;/* Borde del botón de desencriptar */
+    border-radius: 24px;/* Radio de curvatura del botón de desencriptar */
+    font-family: "Inter";/* Fuente del botón de desencriptar */
+    font-weight: 400;/* Peso de fuente normal */
+    font-size: 18px;/* Tamaño de fuente del botón de desencriptar */
+    line-height: 19px;/* Altura de línea del botón de desencriptar */
+    text-align: center;/* Alinear texto horizontalmente */
+    color: #0a3871;/* Color del texto del botón de desencriptar */
+}
+/* Estilos para los botones al pasar el mouse por encima */
+.btn-desencriptar:hover,
+.btn-encriptar:hover {
+    margin: 0.3%;/* Margen del botón al pasar el mouse por encima */
+    width: 24.5%;/* Ancho del botón al pasar el mouse por encima */
+    padding: 1.8%;/* Padding del botón al pasar el mouse por encima */
+}
+/* Estilos para el contenedor de mensaje encriptado */
+.encriptado {
+    display: flex;/* Mostrar elementos en una fila */
+    justify-content: center;/* Alinear elementos horizontalmente */
+    position: absolute;/* Posición absoluta para ubicar el contenedor de mensaje encriptado en la pantalla */
+    width: 30%;/* Ancho del contenedor de mensaje encriptado */
+    height: 90%;/* Alto del contenedor de mensaje encriptado */
+    left: 60%;/* Posición horizontal del contenedor de mensaje encriptado */
+    top: 5%;/* Posición vertical del contenedor de mensaje encriptado */
+    background: #fff;/* Color de fondo del contenedor de mensaje encriptado */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);/* Sombra del contenedor de mensaje encriptado */
+    border-radius: 32px;/* Radio de curvatura del contenedor de mensaje encriptado */
+}
+/* Estilos para el mensaje encriptado */
+.mensaje-encriptado {
+    display: flex;/* Mostrar elementos en una fila */
+    flex-direction: column;/* Dirección de la fila */
+    align-items: center;/* Alinear elementos verticalmente */
+    justify-content: center;/* Alinear elementos horizontalmente */
+    padding: 1%;/* Mostrar padding en el mensaje encriptado */
+    gap: 16px;/* Espacio entre elementos en la fila */
+    position: absolute;/* Posición absoluta para ubicar el mensaje encriptado en la pantalla */
+    width: 100%;/* Ancho del mensaje encriptado */
+    top: 65%; /* Posición vertical del mensaje encriptado */
+    text-align: center;/* Alinear texto horizontalmente */
+}
+/* Estilos para el título del mensaje encriptado */
+.mensaje-encriptado h2 {
+    width: 60%;/* Ancho del título del mensaje encriptado */
+    font-family: "Inter";/* Fuente del título del mensaje encriptado */
+    font-style: normal;/* Estilo de fuente normal */
+    font-weight: 700;/* Peso de fuente bold */
+    font-size: 24px;/* Tamaño de fuente del título del mensaje encriptado */
+    line-height: 120%;/* Altura de línea del título del mensaje encriptado */
+    text-align: center;/* Alinear texto horizontalmente */
+    color: #343a40;/* Color del título del mensaje encriptado */
+}
+/* Estilos para el párrafo del mensaje encriptado */
+.mensaje-encriptado p {
+    width: 80%;/* Ancho del párrafo del mensaje encriptado */
+    font-family: "Inter";/* Fuente del párrafo del mensaje encriptado */
+    font-style: normal;/* Estilo de fuente normal */
+    font-weight: 400;/* Peso de fuente normal */
+    font-size: 16px;/* Tamaño de fuente del párrafo del mensaje encriptado */
+    line-height: 150%;/* Altura de línea del párrafo del mensaje encriptado */
+    text-align: center;/* Alinear texto horizontalmente */
+    color: #495057;/* Color del párrafo del mensaje encriptado */
+}
+/* Estilos para la imagen en el contenedor de mensaje encriptado */
+.encriptado img {
+    position: absolute;/* Posición absoluta para ubicar la imagen en la pantalla */
+    width: 80%;/* Ancho de la imagen */
+    height: 50%;/* Alto de la imagen */
+    top: 15%;/* Posición vertical de la imagen */
+}
+
+/* Estilos para diseño responsivo */
+@media (max-width: 57.5em) {
+    /* Estilos para el contenedor principal en diseño responsivo */
+    .container {
+        display: flex;/* Mostrar elementos en una fila */
+        flex-direction: row;/* Dirección de la fila */
+    }
+
+    .encriptar {
+        width: 100%;
+    }
+ /* Estilos para el campo de texto en diseño responsivo */
+    .texto {
+        width: 80%;/* Ancho del campo de texto en diseño responsivo */
+        height: 60%;/* Alto del campo de texto en diseño responsivo */
+        left: 10%;/* Posición horizontal del campo de texto en diseño responsivo */
+        top: 5%;/* Posición vertical del campo de texto en diseño responsivo */
+    }
+/* Estilos para el contenedor de términos en diseño responsivo */
+    .terminos {
+        width: 80%;/* Ancho del contenedor de términos en diseño responsivo */
+        left: 10%;/* Posición horizontal del contenedor de términos en diseño responsivo */
+        top: 67%;/* Posición vertical del contenedor de términos en diseño responsivo */
+    }
+/* Estilos para el párrafo de términos en diseño responsivo */
+    .terminos p {
+        font-size: 16px;/* Tamaño de fuente del párrafo de términos en diseño responsivo */
+    }
+ /* Estilos para el contenedor de botones en diseño responsivo */
+    .botones {
+        width: 80%;/* Ancho del contenedor de botones en diseño responsivo */
+        left: 10%;/* Posición horizontal del contenedor de botones en diseño responsivo */
+        top: 70%;/* Posición vertical del contenedor de botones en diseño responsivo */
+    }
+/* Estilos para los botones en diseño responsivo */
+/* Estilos para los botones de encriptar y desencriptar */
+    .btn-encriptar,
+    .btn-desencriptar {
+        width: 48%; /* Ancho de los botones */
+        border-radius: 16px;/* Radio de curvatura de los bordes */
+    }
+/* Estilos para los botones de encriptar y desencriptar al pasar el mouse por encima */
+    .btn-encriptar:hover,
+    .btn-desencriptar:hover {
+        margin: 0.3%;/* Margen entre los botones y otros elementos */
+        width: 47.5%;/* Ancho de los botones al pasar el mouse por encima */
+        padding: 1.8%;/* Padding (espacio interior) de los botones al pasar el mouse por encima */
+    }
+/* Estilos para el contenedor de mensaje encriptado */
+    .encriptado {
+        width: 80%;/* Ancho del contenedor de mensaje encriptado */
+        height: 15%;/* Alto del contenedor de mensaje encriptado */
+        left: 10%;/* Posición horizontal del contenedor de mensaje encriptado */
+        top: 80%;/* Posición vertical del contenedor de mensaje encriptado */
+    }
+/* Estilos para el mensaje encriptado */
+    .mensaje-encriptado {
+        width: 100%;/* Ancho del mensaje encriptado */
+        top: 5%;/* Posición vertical del mensaje encriptado */
+    }
+/* Estilos para la imagen en el contenedor de mensaje encriptado */
+    .encriptado img {
+        top: 0;/* Posición vertical de la imagen */
+        display: none;/* Ocultar la imagen */
+        visibility: hidden; /* Ocultar la imagen */
+    }
+}
